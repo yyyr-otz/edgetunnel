@@ -28,6 +28,7 @@ jobs:
           git merge upstream/main || true
           # 恢复要保留的文件和目录
           git checkout HEAD -- .github/workflows/sync.yml
+          git checkout HEAD -- wrangler.toml
           # 提交更改
           git add -A
           git commit -m "自动合并上游" || echo "没有需要提交的更改"
